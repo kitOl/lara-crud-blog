@@ -1,10 +1,10 @@
 @extends('posts.master')
-@extends('title') | Update Post @endsection
+@section('title') | Update Post @endsection
 @section('content')
 
 <div class="row">
     <div class="col-xl-6 mx-auto">
-        <form action="{{ route('posts.update') }}" method="POST">
+        <form action="{{ route('posts.update', $post->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="card">
@@ -25,6 +25,7 @@
 
                 <div class="form-group">
                     <button class="btn btn-success" type="submit"> Update </button>
+                    <a href="{{ route('posts.index') }}" class="btn btn-info"> Back </a>
                 </div>
             </div>
         </div>

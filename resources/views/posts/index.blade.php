@@ -28,10 +28,10 @@
                     <td>
                         <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                         @csrf
-                        <a href="{{ route('posts.show') }}" title="View" class="btn btn-sm btn-info">
+                        <a href="{{ route('posts.show', $post->id) }}" title="View" class="btn btn-sm btn-info">
                             View
                         </a>
-                        <a href="{{ route('posts.edit') }}" title="Edit" class="btn btn-sm btn-success">
+                        <a href="{{ route('posts.edit', $post->id) }}" title="Edit" class="btn btn-sm btn-success">
                             Edit
                         </a>
 
